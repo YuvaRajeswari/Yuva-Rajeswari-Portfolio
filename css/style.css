@@ -723,6 +723,13 @@ section:nth-child(even) {
     margin: 0 auto;
 }
 
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -730,21 +737,24 @@ section:nth-child(even) {
 
 .contact-info > p {
     color: var(--text-secondary);
-    margin-bottom: 25px;
-    font-size: 0.9rem;
+    margin-bottom: 35px; /* Increased spacing for a cleaner look */
+    font-size: 0.95rem;
     line-height: 1.7;
+    max-width: 600px;    /* Keeps the paragraph from getting too wide */
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    align-items: flex-start; /* Keeps the icons and text aligned together on the left... */
+    margin: 0 auto;          /* ...while the whole block stays in the center */
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .contact-item-icon {
@@ -782,8 +792,10 @@ section:nth-child(even) {
 
 .social-links {
     display: flex;
-    gap: 12px;
-    margin-top: 25px;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
 }
 
 .social-link {
